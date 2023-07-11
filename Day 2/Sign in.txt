@@ -1,0 +1,28 @@
+import React from 'react'
+import "./login.css"
+import UserLogin from './UserLogin'
+export default function Signin() {
+  return (
+     
+
+    <>
+    
+        <div className='singinWrap'>
+
+         
+            
+            <div className='farmer'>
+                <div className='sigin-button'>
+                        <button>Dealer</button>  
+                    </div>
+            </div>
+
+        </div>
+
+        <UserLogin />
+
+    </>
+
+
+  )
+}
