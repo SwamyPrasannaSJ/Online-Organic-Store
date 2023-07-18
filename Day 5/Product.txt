@@ -1,0 +1,118 @@
+import React from 'react'
+import Card  from './Card'
+import img1 from '../Assets/Product/1.jpg'
+import img2 from '../Assets/Product/2.jpg'
+import img3 from '../Assets/Product/3.jpg'
+import img4 from '../Assets/Product/4.jpg'
+import './Product.css'
+
+const Product = () => {
+    const products =[
+        {
+            id:1,
+            productimage: img1,
+            productname: 'Cucumber',
+            productprice: 60,
+            count: 'Available 10kg',
+            discount :8
+
+        },
+        {
+            id:2,
+            productimage: img2,
+            productname: 'Cauliflour',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:3,
+            productimage: img3,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:4,
+            productimage: img4,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:5,
+            productimage: img1,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:6,
+            productimage: img2,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:7,
+            productimage: img3,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:8,
+            productimage: img4,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:9,
+            productimage: img1,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        },
+        {
+            id:10,
+            productimage: img2,
+            productname: 'One',
+            productprice: 100,
+            count: '1',
+            discount :10
+
+        }
+    ]
+  return (
+    <div className='allproducts'>
+        <h1>All Products</h1>
+        <div className='products'>
+            {
+                products.map((item)=>{
+                    return(
+                        <Card data={item} key={item.id}  />
+                    )
+                })
+            }
+        </div>
+    </div>
+  )
+}
+
+export default Product
