@@ -1,0 +1,62 @@
+import {React,useState} from 'react'
+import { Link } from 'react-router-dom'
+
+import Navbar from '../Components/Navbar'
+import Bottom1 from '../Bottom/Bottom1'
+import Bot2 from '../Bottom/Bot2'
+import Login from '../Pages/Login'
+
+const Seller = () => {
+
+  const [email,setEmail]=useState();
+
+  const[password,setPassword]=useState();
+  return (
+    <>
+    
+    <div>
+      <Navbar/>
+      <div className='authpage'>
+      
+
+      <div className='authcont'>
+        <img src='https://media.istockphoto.com/id/904559680/photo/this-farm-is-my-pride-and-joy.jpg?s=612x612&w=0&k=20&c=yZPOBZSqnHV4zF66ahEoXrPMwwi3Emh1XSNhXyjJNzg=' alt='login'   />
+
+        <form className='authform' >
+            <h1>Login</h1>
+            <div className='formgroup'>
+                <label htmlFor='email'>CropType</label>
+                <input type='text' id='email' />
+            </div>
+            <div className='formgroup'>
+                <label htmlFor='password'>Seller Name</label>
+                <input  id='password' />
+            </div>
+            <div className='formgroup'>
+                <label htmlFor='password'>Image</label>
+                <input  id='password' />
+            </div>
+            <div className='formgroup'>
+                <label htmlFor='password'>Price</label>
+                <input  id='password' />
+            </div>
+
+            
+
+            
+            <br></br>
+            
+            <input type='submit' /> 
+           
+        </form>
+
+      </div>
+    </div>
+      <Bottom1/>
+      <Bot2/>
+    </div>
+    </>
+  )
+}
+
+export default Seller
