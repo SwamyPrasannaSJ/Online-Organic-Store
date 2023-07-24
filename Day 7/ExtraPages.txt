@@ -1,0 +1,139 @@
+import React from 'react'
+import './Extrapage.css'
+import Navbar from '../Components/Navbar'
+import Bottom1 from '../Bottom/Bottom1'
+import Bot2 from '../Bottom/Bot2'
+
+const PrivacyPolicy = () => {
+  return (
+    <>
+    <div className='extrapage'>
+      <Navbar />
+      <h1>Privacy Policy</h1>
+      <div className='pgcont1'>
+        
+        <p>Innovative Retail Concepts Private Limited (“IRCPL” or “we”) takes the privacy of your information seriously. This Privacy Notice describes the types of personal information we collect from you through our stores, website (including sub-domains and microsites) and mobile applications. It also describes the purposes for which we collect that personal information, the other parties with whom we may share it and the measures we take to protect the security of your data. It also tells you about your rights and choices with respect to your personal information, and how you can contact us about our privacy practices.[1]
+
+You are advised to carefully read this Privacy Notice before using or availing any of our products and/or services.</p>
+      </div>
+      <div className='pgcont1'>
+        <h3>Data</h3>
+        <p>includes non-personal information, personal information and sensitive personal information about you, which either directly or indirectly in combination with other information, could allow you to be identified when you visit our stores, website and/or mobile application.</p>
+      </div>
+
+      <div className='pgcont1'>
+
+        <h3>IRCPL</h3>
+        <p>IRCPL, a company incorporated in India whose registered office is at Ranka Junction, No. 224 (old Sy No.80/3), 4th Floor, Vijinapura, Old Madras Road, K R Puram, Bangalore - 560016, India</p>
+      </div>
+
+      <div className='pgcont1'>
+        <h3>Tata Group Entity</h3>
+        <p>Tata Sons Private Limited, and its subsidiaries, affiliates, associate companies and joint venture companies with whom we have a contractual arrangement to, inter alia, share data for the purposes described in this Privacy Notice.</p>
+      </div>
+
+      <div className='pgcont1'>
+        <h3>WHAT DATA DO WE COLLECT ABOUT YOU</h3>
+        <p>IRCPL collects Data for various purposes set out in this Privacy Notice.
+
+This Data includes, without limitation, the following categories[2]:
+
+Contact information: first and last name, email address, postal address, country, employer, phone number and other similar contact data.
+Financial information: payment instrument information, transactions, transaction history, preferences, method, mode and manner of payment, spending pattern or trends, and other similar data.</p>
+      </div>
+
+      <div className='pgcont1'>
+        <h3>HOW WE COLLECT DATA</h3>
+        <p>We collect Data in the following ways:
+
+Information You Give Us:We receive and store any information you enter on our website or mobile application or give us in any other way (e.g., at outlets, stores, hotels, kiosks). Please see the section titled “Data Shared by You” for more information.
+Automatic Information We Collect:We use “cookies”, pixels and similar technologies to receive and store certain types of information whenever you interact with us. Please see the section below, titled “Data that is Collected Automatically” for more information.</p>
+      </div>
+      <Bottom1 />
+      <Bot2 />
+    </div>
+    </>
+  )
+}
+
+export default PrivacyPolicy
+
+
+import React, { useState } from 'react'
+import Navbar from '../Components/Navbar'
+import { Link } from 'react-router-dom'
+import './AuthPage.css'
+import axios from 'axios'
+
+const Signup = () => {
+
+
+    const[name,setName]=useState();
+
+    const [email,setEmail]=useState();
+
+    const[password,setPassword]=useState();
+    
+
+  const formHandler=(e)=>{
+
+    e.preventDefault();
+    axios.post("http://localhost:8080/api/v1/auth/register",{
+        name:name,
+        email:email,
+        password:password
+    }).then((res)=>console.log(res))
+
+
+  }
+  return (
+    <div>
+                    <Navbar reloadnavbar={false}/>
+                <div className='authcont'>
+                <img src='https://images.unsplash.com/photo-1495480137269-ff29bd0a695c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80'
+                    alt='signup' />
+
+                <form className='authform' onSubmit={formHandler}>
+                    <h1>Signup</h1>
+                    <div className='form-group-row'>
+                        <div className='formgroup'>
+                            <label htmlFor='fname'>First Name</label>
+                            <input type='text' id='fname' onChange={(e)=>setName(e.target.value)} />
+                        </div>
+                        <div className='formgroup'>
+                            <label htmlFor='lname'>Last Name</label>
+                            <input type='text' id='lname' />
+                        </div>
+                    </div>
+                    <div className='formgroup'>
+                        <label htmlFor='email'>Email</label>
+                        <input type='email' id='email'  onChange={(e)=>setEmail(e.target.value)}/>
+                    </div>
+
+                    <div className='form-group-row'>
+                        <div className='formgroup'>
+                            <label htmlFor='password'>Password</label>
+                            <input type='password' id='password'  onChange={(e)=>setPassword(e.target.value)} />
+                        </div>
+                        <div className='formgroup'>
+                        <label htmlFor='cpassword'>Confirm Password</label>
+                        <input type='password' id='cpassword' />
+                    </div>
+                    </div>
+
+                    
+                    <Link to='/login' className='styleone'>
+                        <p>Already have an account?</p>
+                    </Link>
+                    {/* <Link to='/signup'
+                        className='stylenone'
+                    > */}
+                         <input type='submit' />
+                    {/* </Link> */}
+                </form>
+            </div>
+    </div>
+  )
+}
+
+export default Signup
