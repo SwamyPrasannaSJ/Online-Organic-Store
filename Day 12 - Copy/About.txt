@@ -1,0 +1,61 @@
+import React from 'react'
+import Navbar from '../Components/Navbar'
+import Bottom1 from '../Bottom/Bottom1'
+import Bot2 from '../Bottom/Bot2'
+import './Extrapage.css'
+const About = () => {
+  return (
+    <div>
+        <Navbar/>
+
+        <div className='extrapage'>
+
+          <h1 className='title'>ABOUT US</h1>
+          
+          <div className='pgleft pgcommon'>
+              <img src='https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80' alt='noimg' />
+
+              <div>
+                  <h1>Our Story</h1>
+                  <p>
+                  Beginning as early as the 14th century, a grocer (or "purveyor") was a dealer in comestible dry goods such as spices, peppers, sugar, and (later) cocoa, tea, and coffee. Because these items were often bought in bulk, they were named after the French word for wholesaler, or "grossier". This, in turn, is derived from the Medieval Latin term "grossarius",[8] from which the term "gross" (meaning a quantity of 12 dozen, or 144) is also derived.
+
+From the late 1600s until the 1850s, the word "grocery" referred to a place where people went to drink.
+                  </p>
+
+              </div>
+          </div>
+          <div className='pgright pgcommon'>
+              <img src='https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80' alt='noimg' />
+
+              <div>
+                  <h1>Who are we</h1>
+                  <p>
+                  Fresh Market is your local neighborhood grocery store owned and operated by Associated Food Stores, a member-owned wholesale grocery distributor based in Salt Lake City, Utah. Associated Food Stores has been serving Utah and its neighboring states for more than 70 years.
+
+We are committed to providing wholesome products that fit your lifestyle. That is why we continue to add to our growing list of natural, organic and gluten-free lines. It is part of living up to our promise to provide you with fresh, nutritious foods in convenient, easy-to-shop, locations. You can find these great offerings in all of the departments throughout our store.
+                  </p>
+
+              </div>
+          </div>
+          <div className='pgleft pgcommon'>
+              <img src='https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80' alt='noimg' />
+
+              <div>
+                  <h1>Our Vision</h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+          </div>
+      
+        <Bottom1/>
+        <Bot2/>
+        </div>
+
+
+
+    </div>
+  )
+}
+
+export default About
+
